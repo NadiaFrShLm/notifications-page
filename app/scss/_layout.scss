@@ -1,0 +1,129 @@
+.header {
+  @include flex(flex-start);
+  background-color: var(--white);
+  padding-bottom: 1rem;
+
+  &__unread {
+    font-weight: var(--fw-bold);
+    color: var(--white);
+    background-color: var(--blue);
+    width: 3.4rem;
+    height: 2.8rem;
+    @include flex(center);
+    @include raduis(0.7rem);
+    margin-left: 0.8rem;
+
+    @include breakpoint-up(medium) {
+      margin-left: 1rem;
+    }
+  }
+  &__readAll {
+    font-size: inherit;
+    cursor: pointer;
+    margin-left: auto;
+    color: var(--darkGray);
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+.notifications {
+  padding-top: 1rem;
+  background-color: var(--white);
+}
+.notification.new {
+  background-color: var(--veryLightGray);
+}
+.notification {
+  padding: 1.5rem 1.3rem;
+  @include raduis;
+  @include flex {
+    gap: 1rem;
+  }
+
+  @include breakpoint-up(medium) {
+    padding: 1.8rem 1.5rem;
+    gap: 1.8rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+    @include breakpoint-up(medium) {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    align-self: flex-start;
+
+    @include breakpoint-up(medium) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  &__textWrapper {
+    margin-bottom: 0.3rem;
+  }
+  &__name {
+    font-weight: var(--fw-bold);
+    margin-right: 0.5rem;
+  }
+  &__text {
+    color: var(--darkGray);
+    margin-right: 0.5rem;
+  }
+  &__post {
+    color: var(--darkGray);
+    font-weight: 800;
+  }
+  &__group {
+    color: var(--blue);
+    font-weight: var(--fw-bold);
+  }
+  .new &__dot {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--red);
+  }
+  &__when {
+    color: var(--gray);
+  }
+  &__imgWrapper {
+    align-self: flex-start;
+    margin-left: auto;
+  }
+  &__imgComment {
+    width: 4.8rem;
+    height: 100%;
+    @include raduis(0.5rem);
+    border: 3px solid transparent;
+
+    &:hover {
+      border-color: var(--lightGray1);
+      border-radius: 1rem;
+    }
+  }
+  &__message {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 1.7rem 1.5rem;
+    color: var(--gray);
+    border: 1px solid var(--gray);
+    @include raduis(0.5rem);
+
+    &:hover {
+      color: var(--darkGray);
+      background-color: var(--lightGray1);
+      border-color: var(--lightGray1);
+    }
+  }
+}
