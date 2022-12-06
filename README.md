@@ -23,7 +23,7 @@ This is my solution to the Notifications page
 
 #### Desktop and mobile versions of layout
 
-![Image](screenshots/screenshot.pdf)
+![Image](screenshot.pdf)
 
 ### Links
 
